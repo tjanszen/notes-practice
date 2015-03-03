@@ -5,5 +5,8 @@ angular.module('angular-notes', ['ui.router'])
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-      .state('home', {url:'/', templateUrl:'/views/home/home.html'});
+      .state('home', {url:'/', templateUrl:'/views/general/home.html'})
+      .state('faq', {url:'/faq', templateUrl:'/views/general/faq.html'})
+      .state('contact', {url:'/contact', templateUrl:'/views/general/contact.html'})
+      .state('register', {url:'/register', templateUrl:'/views/users/users.html', controller:'UsersCtrl'});
   }]);

@@ -1,6 +1,6 @@
 {
-  "name": "hapi-prototype",
-  "description": "Hapi Prototype Application",
+  "name": "angular-notes",
+  "description": "Angular Notes",
   "homepage": "https://github.com/coding-house-jan2015/hapi-prototype",
   "engines": {
     "node": "0.12.x"
@@ -15,7 +15,7 @@
     "mongo",
     "mongoose"
   ],
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "author": "Tommy Janszen <tommy.janszen@gmail.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/coding-house-jan2015/hapi-prototype.git"
@@ -29,6 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "bcrypt": "^0.8.1",
     "good": "^5.1.2",
     "good-console": "^4.1.0",
     "hapi": "^8.2.0",
