@@ -5,8 +5,6 @@ h1 {{name}}
       .form-group
         label(for='email') Email
         input#email.form-control(type='email', name='email', autofocus=true, ng-model='user.email')
-          
-        
       .form-group(ng-show='name === "Register"')
         label(for='password1') Password
         input#password.form-control(type='password', name='password1', ng-model='user.password1')

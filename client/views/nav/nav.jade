@@ -1,4 +1,4 @@
-nav.navbar.navbar-default
+nav.navbar.navbar-default(ng-controller='NavCtrl')
   .container-fluid
     .navbar-header
       button.navbar-toggle.collapsed(data-toggle="collapse", data-target="#navbar")
@@ -9,8 +9,10 @@ nav.navbar.navbar-default
       a.navbar-brand(href='/') Angular Notes
     #navbar.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
-        li.active: a(ui-sref='home'): i.fa.fa-home &nbsp; Home
-        li.active: a(ui-sref='faq'): i.fa.fa-home &nbsp; FAQ
-        li.active: a(ui-sref='contact'): i.fa.fa-home &nbsp; Contact
-        li.active: a(ui-sref='register'): i.fa.fa-home &nbsp; Register
-        li.active: a(ui-sref='login'): i.fa.fa-home &nbsp; Login
+        li: a(ui-sref='home'): i.fa.fa-home &nbsp; Home
+        li: a(ui-sref='faq'): i.fa.fa-home &nbsp; FAQ
+        li: a(ui-sref='contact'): i.fa.fa-home &nbsp; Contact
+        li(ng-show='!email'): a(ui-sref='register'): i.fa.fa-home &nbsp; Register
+        li(ng-show='!email'): a(ui-sref='login'): i.fa.fa-home &nbsp; Login
+        li(ng-show='email'): a(ng-click='logout()'): i.fa.fa-home &nbsp; Logout
+        li: a(href='#') {{email}}

@@ -14,7 +14,7 @@ module.exports = {
   handler: function(request, reply) {
     User.authenticate(request.payload, function(err, user) {
       if (err) {
-        reply().code(400)
+        reply().code(400);
       } else {
         request.auth.session.set(user);
         reply({email:user.email});
