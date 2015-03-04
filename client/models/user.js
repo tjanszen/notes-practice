@@ -4,8 +4,13 @@ angular.module('angular-notes')
   .factory('User', ['$http', function($http){
 
     function register(user){
-      return $http.post('/register', user)
+      return $http.post('/register', user);
     }
 
-    return {register:register};
-  }])
+    function login(user){
+      return $http.post('/login', user);
+    }
+
+    return {register:register, login:login};
+
+  }]);
