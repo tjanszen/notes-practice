@@ -15,4 +15,6 @@ nav.navbar.navbar-default(ng-controller='NavCtrl')
         li(ng-show='!email'): a(ui-sref='register'): i.fa.fa-home &nbsp; Register
         li(ng-show='!email'): a(ui-sref='login'): i.fa.fa-home &nbsp; Login
         li(ng-show='email'): a(ng-click='logout()'): i.fa.fa-home &nbsp; Logout
+        li(ng-show='email'): a(ui-sref='notes.new'): i.fa.fa-home &nbsp; New Notes
+        li(ng-show='email'): a(ui-sref='notes.list'): i.fa.fa-home &nbsp; Notes
         li: a(href='#') {{email}}

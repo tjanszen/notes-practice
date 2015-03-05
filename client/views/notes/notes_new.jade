@@ -1,0 +1,18 @@
+h1 notes new
+
+form
+  .form-group
+    label Note Title
+    input(ng-model='note.title')
+  .form-group
+    label Note 
+    textarea(ng-model='note.body')
+  .form-group
+    label Tags
+    input(ng-model='note.tags')
+  .form-group
+    button(ng-click='add()').btn Add URL
+  .form-grop
+    input(ng-model='note.urls[$index]', ng-repeat='t in temp track by $index')
+  .form-group
+    button(ng-click='submit(note)') Create Note

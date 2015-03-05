@@ -1,9 +1,9 @@
 'use strict';
 
+var Note = require('../../models/note');
 
 module.exports = {
   handler: function(request, reply) {
-    request.auth.session.clear();
-    reply();
+    console.log('hello');
   }
 };
